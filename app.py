@@ -64,6 +64,9 @@ def text_to_speech():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
+@app.route('/', methods=['GET'])
+def text_to_speech2():
+    return "Up!"
+    
 if __name__ == '__main__':
     app.run(debug=True)
